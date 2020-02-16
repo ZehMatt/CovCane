@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{35755ac6-a347-4065-a09f-e231ff518e87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="private">
+      <UniqueIdentifier>{cd1ebb3d-5f63-4f5b-8e28-1816c14b9f38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Tests">
+      <UniqueIdentifier>{e4965e8c-9fe9-47b2-beff-ee954070309b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="private\Tests">
+      <UniqueIdentifier>{7aa3f5ab-1260-4cfd-90a4-9ade76008ac1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tests\CppExceptions.cpp">
+      <Filter>src\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tests\LongJmp.cpp">
+      <Filter>src\Tests</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="private\Tests\Test.h">
+      <Filter>private\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="private\Tests\CppExceptions.h">
+      <Filter>private\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="private\Tests\LongJmp.h">
+      <Filter>private\Tests</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
