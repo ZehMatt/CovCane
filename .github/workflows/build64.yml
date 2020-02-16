@@ -1,0 +1,21 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: AsmJIT Dependency setup
+      run: vcpkg install asmjit:x64-windows-static
+    - name: Zydis Depdency setup
+      run: vcpkg install zydis:x64-windows-static
+    - name: Vcpkg Integration
+      run: vcpkg integrate install
+    - name: Setup MSBuild.exe
+      uses: warrenbuckley/Setup-MSBuild@v1
+    - name: Build x64
+      run: msbuild src/CovCane.sln /t:Rebuild /p:configuration=Release /p:Platform=x64
