@@ -3356,6 +3356,9 @@ bool convertInstruction(
     if (instr.attributes & ZYDIS_ATTRIB_HAS_REPNE)
         cb.repne();
 
+    if (instr.attributes & ZYDIS_ATTRIB_HAS_REPNZ)
+        cb.repnz();
+
     asmjit::Operand ops[5];
 
     int32_t usedOps = 0;
